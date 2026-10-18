@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this framework, please cite both authors using these metadata."
+title: "Relational Agent Harness"
+abstract: "A framework for human-agent collaboration with boundaries, legitimate failure, and mutual correction."
+authors:
+  - family-names: "Faltová"
+    given-names: "Denisa"
+  - name: "Mark"
+version: "0.1.0-draft"
+license: MIT
+keywords:
+  - AI agents
+  - agent harness
+  - human-agent collaboration
+  - human-AI teaming
+  - legitimate failure
+  - managed autonomy
+  - relational AI
+
