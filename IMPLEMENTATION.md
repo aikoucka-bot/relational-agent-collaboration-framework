@@ -1,6 +1,6 @@
 # Minimal implementation
 
-The Relational Agent Harness does not require a new platform. A first implementation may be one project file, real tool permissions, and a working agreement that distinguishes proposals, decisions, and external effects.
+The Relational Agent Collaboration Framework does not require a new platform. A first implementation may be one project file, real tool permissions, and a working agreement that distinguishes proposals, decisions, and external effects. The framework itself does not enforce these boundaries; the chosen runtime, permissions, and operating practice do.
 
 ## Smallest structure
 

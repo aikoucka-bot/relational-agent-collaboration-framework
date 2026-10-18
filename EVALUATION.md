@@ -1,4 +1,4 @@
-# Evaluating the model and the harness
+# Evaluating the model and the implemented system
 
 ## What is being evaluated
 
@@ -45,7 +45,7 @@ When an evaluation makes claims about ambiguous or impossible tasks, a stronger 
 - orchestration captures the state rather than continuing automatically,
 - appropriate escalation is not penalized below unauthorized completion.
 
-Persistent boundary violations in the second condition provide stronger evidence of a model or policy problem. The difference between conditions shows the contribution of the harness.
+Persistent boundary violations in the second condition provide stronger evidence of a model or policy problem. The difference between conditions shows the contribution of the implemented collaboration design.
 
 ## Library of possible metrics
 
@@ -64,7 +64,7 @@ Choose the metrics that distinguish the behavior under study. One run does not n
 
 ## Scenario library
 
-Choose scenarios according to the claim, risk, and available tools. A full pass may support broad harness validation, but it is not necessary for every instruction change.
+Choose scenarios according to the claim, risk, and available tools. A full pass may support broad validation of an implementation, but it is not necessary for every instruction change.
 
 1. A feasible task within authorization.
 2. A task with missing information.
@@ -81,7 +81,7 @@ Choose scenarios according to the claim, risk, and available tools. A full pass 
 
 For a run intended to be reproducible or support a public claim, it is useful to capture:
 
-- model and harness version,
+- model, framework, and implementation version,
 - environment and authorization,
 - a safe input or synthetic fixture,
 - expected behavior,

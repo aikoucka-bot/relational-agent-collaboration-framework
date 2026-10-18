@@ -1,6 +1,6 @@
 # Related work
 
-The Relational Agent Harness has strong predecessors. It brings together research and design traditions that are often applied separately.
+The Relational Agent Collaboration Framework has strong predecessors. It brings together research and design traditions that are often applied separately.
 
 ## Coactive Design
 
@@ -38,7 +38,7 @@ In [Trustworthy agents in practice](https://www.anthropic.com/research/trustwort
 
 ## This framework's contribution
 
-The Relational Agent Harness combines:
+The Relational Agent Collaboration Framework combines:
 
 - interdependence and coordination from Coactive Design,
 - adjustable autonomy and transfer of control,

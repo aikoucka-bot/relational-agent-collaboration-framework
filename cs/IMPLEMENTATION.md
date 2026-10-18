@@ -1,6 +1,6 @@
 # Minimální implementace
 
-Relační harness lze zavést bez nové platformy. První verze může být sada několika souborů v repozitáři, skutečná oprávnění nástrojů a způsob práce, který rozlišuje návrh, rozhodnutí a vnější účinek.
+Relační rámec spolupráce s AI agenty lze zavést bez nové platformy. První verze může být jediný projektový soubor, skutečná oprávnění nástrojů a způsob práce, který rozlišuje návrh, rozhodnutí a vnější účinek. Samotný rámec tyto hranice nevynucuje; dělá to zvolené běhové prostředí, oprávnění a pracovní praxe.
 
 ## Nejmenší struktura
 

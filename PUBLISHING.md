@@ -5,7 +5,7 @@
 The public framework lives in the standalone GitHub repository:
 
 ```text
-https://github.com/aikoucka-bot/relational-agent-harness
+https://github.com/aikoucka-bot/relational-agent-collaboration-framework
 ```
 
 Keeping the repository separate from the personal vault prevents internal history, private context, and client material from entering the public artifact.

@@ -5,7 +5,7 @@
 Pro první veřejnou verzi je vhodný samostatný veřejný GitHub repozitář. Pracovní název:
 
 ```text
-relational-agent-harness
+relational-agent-collaboration-framework
 ```
 
 Bezpečnější publikační cesta vede přes samostatný repozitář, nikoli přes veřejnou větev nebo kopii osobního vaultu. Do repozitáře pak vstupuje pouze zkontrolovaný veřejný balíček.
@@ -26,7 +26,7 @@ GitHub doporučuje, aby README vysvětlilo účel, přínos, první kroky, podpo
 ### 1. Soukromá příprava
 
 - schválit český významový základ,
-- potvrdit název **Relational Agent Harness**,
+- potvrdit název **Relational Agent Collaboration Framework**,
 - odstranit interní poznámky a placeholdery,
 - ověřit odkazy a Markdown.
 

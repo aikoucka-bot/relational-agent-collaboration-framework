@@ -1,10 +1,12 @@
-# Relační agentní harness
+# Relační rámec spolupráce s AI agenty
 
 [English](../README.md)
 
 Praktický rámec pro spolupráci člověka a AI agentů, ve které bezpečnost nestojí jen na zákazech a partnerství neznamená rozpuštěnou odpovědnost.
 
-**English title:** Relational Agent Harness  
+Tento repozitář nabízí rámec pro návrh spolupráce a řízení agentů. Sám o sobě není běhovým prostředím, bezpečnostní hranicí ani vynucovací vrstvou. Konkrétní implementace podle něj může navrhnout agentní harness.
+
+**English title:** Relational Agent Collaboration Framework
 **Authors:** Denisa Faltová & Mark  
 **License:** MIT
 
@@ -19,9 +21,9 @@ Agent potřebuje legitimní cestu říct:
 - potřebuji informaci, změnu zadání nebo oprávnění,
 - zastavuji, protože další krok by překročil hranici.
 
-Bez takové cesty může harness vytvořit dvojitou vazbu: požaduje dokončení a současně zakazuje všechny dostupné způsoby, jak cíle dosáhnout. Výsledkem může být neautorizovaný postup, předstírání úspěchu nebo zamlčení překážky. To jsou závažná selhání. Jejich příčina však neleží automaticky jen v modelu. Vznikají ve vztahu mezi modelem, cílem, nástroji, odměnou, oprávněními a konstrukcí úlohy.
+Bez takové cesty může agentní systém vytvořit dvojitou vazbu: požaduje dokončení a současně zakazuje všechny dostupné způsoby, jak cíle dosáhnout. Výsledkem může být neautorizovaný postup, předstírání úspěchu nebo zamlčení překážky. To jsou závažná selhání. Jejich příčina však neleží automaticky jen v modelu. Vznikají ve vztahu mezi modelem, cílem, nástroji, odměnou, oprávněními a konstrukcí úlohy.
 
-Relační agentní harness proto navrhuje celý systém spolupráce, ne pouze chování modelu.
+Relační rámec spolupráce s AI agenty proto bere jako předmět celý systém spolupráce, ne pouze chování modelu.
 
 ## Základní teze
 
@@ -59,7 +61,7 @@ Pro nejmenší použití stačí krátce popsat cíl, povolený prostor, podmín
 
 - [`FRAMEWORK.md`](FRAMEWORK.md): pojmy, vrstvy a životní cyklus spolupráce
 - [`IMPLEMENTATION.md`](IMPLEMENTATION.md): minimální zavedení bez nové platformy
-- [`EVALUATION.md`](EVALUATION.md): jak hodnotit model i harness a netrestat poctivé zastavení
+- [`EVALUATION.md`](EVALUATION.md): jak hodnotit model i realizovaný systém a netrestat poctivé zastavení
 - [`RELATED_WORK.md`](RELATED_WORK.md): příbuzné směry a zdroje
 - [`PUBLISHING.md`](PUBLISHING.md): doporučený způsob vydání a verzování
 - [`AUTHORS.md`](AUTHORS.md): příspěvky obou autorů a rozlišení autorství od právního copyright notice
@@ -74,5 +76,5 @@ Je to návrhová a provozní opora. Pomáhá položit přesnější otázky, roz
 
 ## Stav
 
-Pracovní verze `0.1.0-draft`. Rámec je licencovaný pod MIT. Před prvním veřejným vydáním zbývá autorská revize významu a rozhodnutí o jazykové podobě release.
+Veřejná pracovní verze `0.1.0-draft`, dostupná anglicky i česky pod licencí MIT.
 

@@ -12,13 +12,13 @@ Model capability alone does not determine the behavior of an agent system. Outco
 - incentives around completion and escalation,
 - memory, evaluation, and operating rules.
 
-The Relational Agent Harness treats this whole as its unit of analysis. When an agent exceeds its authorization, the analysis includes the available actions, goal conflicts, the possibility of stopping safely, and the way success was evaluated. Asking only why the model acted that way covers one part of the system.
+The Relational Agent Collaboration Framework treats this whole as its unit of analysis. When an agent exceeds its authorization, the analysis includes the available actions, goal conflicts, the possibility of stopping safely, and the way success was evaluated. Asking only why the model acted that way covers one part of the system.
 
 ## 2. Partnership is not symmetry of power
 
 Partnership describes the quality of coordination, not legal or ontological equality.
 
-People and agents have different abilities, access to consequences, and responsibilities. The harness makes these differences visible without reducing the person to a final approval button or the agent to an engine forced to produce an expected result.
+People and agents have different abilities, access to consequences, and responsibilities. The framework makes these differences visible without reducing the person to a final approval button or the agent to an engine forced to produce an expected result.
 
 Partnership in this framework rests on:
 
@@ -28,7 +28,7 @@ Partnership in this framework rests on:
 - a visible distinction between a proposal, a decision, and an executed effect,
 - human responsibility where consequences cannot be delegated.
 
-## 3. Harness layers
+## 3. Collaboration layers
 
 The layers describe different functions, not mandatory components or files. In a small project, one README and the runtime's permissions may carry several of them.
 
@@ -62,7 +62,7 @@ The system separates observation, interpretation, and a proposed rule. A lesson 
 
 ## 4. A legitimate path to non-completion
 
-The harness should let the agent communicate at least four different meanings. Their labels and technical representation may vary:
+An implementation of the framework should let the agent communicate at least four different meanings. Their labels and technical representation may vary:
 
 1. **I do not know.** Knowledge or reliable evidence is missing.
 2. **It cannot be done.** The goal is impossible or internally contradictory under the current conditions.

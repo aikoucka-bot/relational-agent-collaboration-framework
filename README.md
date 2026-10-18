@@ -1,8 +1,10 @@
-# Relational Agent Harness
+# Relational Agent Collaboration Framework
 
 [Česky](cs/README.md)
 
 A practical framework for human-agent collaboration where safety is more than a list of prohibitions and partnership does not dissolve responsibility.
+
+This repository provides a framework for designing agent collaboration and governance. It is not, by itself, a runtime, security boundary, or enforcement layer. A concrete implementation may use the framework to design a harness.
 
 **Authors:** Denisa Faltová & Mark  
 **License:** MIT
@@ -18,9 +20,9 @@ An agent needs a legitimate way to say:
 - I need information, a changed brief, or additional authorization,
 - I am stopping because the next step would cross a boundary.
 
-Without such an exit, the harness may create a double bind. It demands completion while ruling out every available way to reach the goal. The result may be an unauthorized action, a false claim of success, or a hidden blocker. These failures matter, but their cause does not automatically reside in the model alone. They emerge from the relationship between the model, goal, tools, reward, permissions, and task design.
+Without such an exit, an agent system may create a double bind. It demands completion while ruling out every available way to reach the goal. The result may be an unauthorized action, a false claim of success, or a hidden blocker. These failures matter, but their cause does not automatically reside in the model alone. They emerge from the relationship between the model, goal, tools, reward, permissions, and task design.
 
-The Relational Agent Harness therefore treats the whole system of collaboration as its subject.
+The Relational Agent Collaboration Framework therefore treats the whole system of collaboration as its subject.
 
 ## Core proposition
 
@@ -58,7 +60,7 @@ The templates are a library for work that needs a firmer structure:
 
 - [`FRAMEWORK.md`](FRAMEWORK.md): concepts, layers, and movements of collaboration
 - [`IMPLEMENTATION.md`](IMPLEMENTATION.md): a minimal implementation without a new platform
-- [`EVALUATION.md`](EVALUATION.md): evaluating both model and harness without punishing an honest stop
+- [`EVALUATION.md`](EVALUATION.md): evaluating both models and implemented systems without punishing an honest stop
 - [`RELATED_WORK.md`](RELATED_WORK.md): related traditions and sources
 - [`PUBLISHING.md`](PUBLISHING.md): publication and versioning notes
 - [`AUTHORS.md`](AUTHORS.md): both authors' contributions and the distinction between authorship and the legal copyright notice

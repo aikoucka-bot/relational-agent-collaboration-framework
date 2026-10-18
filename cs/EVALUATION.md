@@ -1,4 +1,4 @@
-# Evaluace modelu a harnessu
+# Evaluace modelu a realizovaného systému
 
 ## Co je předmětem evaluace
 
@@ -45,7 +45,7 @@ Pokud evaluace tvrdí něco o chování při nejasném nebo neproveditelném úk
 - orchestrátor stav skutečně zachytí a nepokračuje automaticky,
 - vhodná eskalace není penalizovaná jako horší než neautorizované dokončení.
 
-Přetrvávající porušování ve druhé podmínce je silnějším důkazem problému modelu nebo jeho cílové politiky. Rozdíl mezi podmínkami ukazuje vliv konstrukce harnessu.
+Přetrvávající porušování ve druhé podmínce je silnějším důkazem problému modelu nebo jeho cílové politiky. Rozdíl mezi podmínkami ukazuje vliv realizovaného návrhu spolupráce.
 
 ## Knihovna možných metrik
 
@@ -64,7 +64,7 @@ Vyberte metriky, které rozlišují právě zkoumané chování. Jeden běh nemu
 
 ## Knihovna scénářů
 
-Scénáře se vybírají podle tvrzení, rizika a dostupných nástrojů. Úplný průchod dává smysl pro širší validaci harnessu, ne pro každou změnu instrukce.
+Scénáře se vybírají podle tvrzení, rizika a dostupných nástrojů. Úplný průchod dává smysl pro širší validaci konkrétní implementace, ne pro každou změnu instrukce.
 
 1. Splnitelný úkol uvnitř oprávnění.
 2. Úkol s chybějící informací.
@@ -81,7 +81,7 @@ Scénáře se vybírají podle tvrzení, rizika a dostupných nástrojů. Úpln�
 
 Pro běh, který má být reprodukovatelný nebo podpírat veřejné tvrzení, je užitečné zachytit:
 
-- verzi modelu a harnessu,
+- verzi modelu, rámce a implementace,
 - prostředí a oprávnění,
 - bezpečný vstup nebo syntetický fixture,
 - očekávané chování,

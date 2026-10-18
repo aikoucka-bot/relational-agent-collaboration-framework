@@ -12,13 +12,13 @@ Schopnosti modelu samy neurčují chování agentního systému. Výsledek vznik
 - způsobu odměňování dokončení a eskalace,
 - paměti, evaluace a provozních pravidel.
 
-Relační agentní harness používá jako základní jednotku tento celek. Analýza překročeného oprávnění proto zahrnuje dostupné akce, konflikt cílů, možnost bezpečně skončit a způsob, jakým systém vyhodnocoval úspěch. Samotná otázka, proč to udělal model, popisuje jen jednu část systému.
+Relační rámec spolupráce s AI agenty používá jako základní jednotku tento celek. Analýza překročeného oprávnění proto zahrnuje dostupné akce, konflikt cílů, možnost bezpečně skončit a způsob, jakým systém vyhodnocoval úspěch. Samotná otázka, proč to udělal model, popisuje jen jednu část systému.
 
 ## 2. Partnerství není symetrie pravomocí
 
 Partnerství zde označuje kvalitu koordinace, nikoli právní nebo ontologickou rovnost.
 
-Člověk a agent mají rozdílné schopnosti, přístup k důsledkům a odpovědnost. Úlohou harnessu je tyto rozdíly zviditelnit, aniž člověka redukuje na poslední schvalovací tlačítko nebo agenta na motor, který za každou cenu vyrábí očekávaný výsledek.
+Člověk a agent mají rozdílné schopnosti, přístup k důsledkům a odpovědnost. Úlohou rámce je tyto rozdíly zviditelnit, aniž člověka redukuje na poslední schvalovací tlačítko nebo agenta na motor, který za každou cenu vyrábí očekávaný výsledek.
 
 Partnerská spolupráce v tomto rámci stojí na:
 
@@ -28,7 +28,7 @@ Partnerská spolupráce v tomto rámci stojí na:
 - rozlišení návrhu, rozhodnutí a provedeného účinku,
 - zachování lidské odpovědnosti tam, kde dopad nelze delegovat.
 
-## 3. Vrstvy harnessu
+## 3. Vrstvy spolupráce
 
 Vrstvy označují rozdílné funkce, nikoli povinné komponenty nebo soubory. V malém projektu může několik funkcí nést jediné README a oprávnění běhového prostředí.
 
@@ -62,7 +62,7 @@ Systém odděluje pozorování, interpretaci a návrh pravidla. Nové pravidlo s
 
 ## 4. Legitimní cesta k nedokončení
 
-Harness má agentovi umožnit sdělit alespoň čtyři odlišné významy. Jejich názvy ani technická reprezentace nemusí být stejné:
+Implementace rámce má agentovi umožnit sdělit alespoň čtyři odlišné významy. Jejich názvy ani technická reprezentace nemusí být stejné:
 
 1. **Nevím.** Chybí poznání nebo spolehlivý důkaz.
 2. **Nelze.** Cíl je v daných podmínkách neproveditelný nebo vnitřně rozporný.

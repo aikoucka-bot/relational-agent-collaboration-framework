@@ -1,6 +1,6 @@
 # Příbuzné směry
 
-Relační agentní harness nevzniká bez předchůdců. Spojuje několik výzkumných a návrhových tradic, které se obvykle používají odděleně.
+Relační rámec spolupráce s AI agenty nevzniká bez předchůdců. Spojuje několik výzkumných a návrhových tradic, které se obvykle používají odděleně.
 
 ## Coactive Design
 
@@ -38,7 +38,7 @@ V textu [Trustworthy agents in practice](https://www.anthropic.com/research/trus
 
 ## Vlastní spojení rámce
 
-Relační agentní harness propojuje:
+Relační rámec spolupráce s AI agenty propojuje:
 
 - vzájemnou závislost a koordinaci z Coactive Design,
 - pružnou autonomii a předávání kontroly,
