@@ -1,60 +1,60 @@
-# Kontext projektu
+# Project context
 
-> Použijte, když projekt potřebuje trvalejší společný stav. Nepotřebné části smažte. U malého úkolu může stejnou funkci splnit odstavec v existujícím README.
+> Use this when a project needs durable shared state. Delete sections that do not help. A paragraph in an existing README may be enough for a small task.
 
-## Účel
+## Purpose
 
-[Jaký problém projekt řeší a pro koho?]
+[What problem does this project address, and for whom?]
 
-## Hranice
+## Boundaries
 
-### Uvnitř projektu
+### Inside the project
 
-- [co sem patří]
+- [what belongs here]
 
-### Mimo projekt
+### Outside the project
 
-- [co sem nepatří]
+- [what does not belong here]
 
-## Vlastník a odpovědnost
+## Ownership and responsibility
 
-- Vlastník cíle: [jméno nebo role]
-- Provozní odpovědnost: [jméno nebo role]
-- Kdo schvaluje vnější nebo nevratné účinky: [jméno nebo role]
+- Goal owner: [name or role]
+- Operational responsibility: [name or role]
+- Approver for external or irreversible effects: [name or role]
 
-## Prostředí a data
+## Environment and data
 
-- Prostředí: [lokální / DEV / TEST / PROD]
-- Tenant nebo účet: [bez tajných údajů]
-- Datová třída: [veřejná / interní / osobní / citlivá]
-- Povolené zdroje: [seznam nebo odkazy]
-- Zakázané přenosy: [kam data nesmí odejít]
+- Environment: [local / DEV / TEST / PROD]
+- Tenant or account: [no secrets]
+- Data class: [public / internal / personal / sensitive]
+- Allowed sources: [list or links]
+- Prohibited transfers: [where the data may not go]
 
-## Kanonické zdroje
+## Canonical sources
 
-- [soubor nebo systém]: [co je v něm autoritativní]
+- [file or system]: [what is authoritative there]
 
-## Ověřený současný stav
+## Verified current state
 
-- [doložený fakt]
+- [fact supported by evidence]
 
-## Platná rozhodnutí a důvody
+## Accepted decisions and reasons
 
-- [datum]: [rozhodnutí] protože [důvod]
+- [date]: [decision] because [reason]
 
-## Otevřené otázky
+## Open questions
 
-- [otázka, kterou nelze vydávat za rozhodnutí]
+- [a question that must not be presented as a decision]
 
-## Rizika a závislosti
+## Risks and dependencies
 
-- [riziko nebo závislost]: [vlastník a další krok]
+- [risk or dependency]: [owner and next step]
 
-## Nejbližší krok
+## Next step
 
-[Jeden konkrétní krok.]
+[One concrete step.]
 
-## Hotovo, když
+## Done when
 
-[Pozorovatelná podmínka dokončení projektu nebo současné fáze.]
+[An observable completion condition for the project or current phase.]
 

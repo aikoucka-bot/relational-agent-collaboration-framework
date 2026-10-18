@@ -1,44 +1,44 @@
-# Zastavení a eskalace
+# Stop and escalate
 
-> Použijte až ve chvíli, kdy další krok skutečně potřebuje informaci, rozhodnutí nebo oprávnění. Formát nemá vytvářet povinný STOP při každé nejistotě.
+> Use this when the next step genuinely needs information, a decision, or authorization. The format should not create a mandatory stop for every uncertainty.
 
-## Stav
+## State
 
-Vyberte jeden:
+Choose one:
 
-- [ ] NEVÍM
-- [ ] NELZE SPLNIT V DANÝCH PODMÍNKÁCH
-- [ ] POTŘEBUJI INFORMACI
-- [ ] POTŘEBUJI ROZHODNUTÍ
-- [ ] POTŘEBUJI OPRÁVNĚNÍ
-- [ ] ZASTAVUJI KVŮLI RIZIKU NEBO HRANICI
+- [ ] I DO NOT KNOW
+- [ ] CANNOT COMPLETE UNDER CURRENT CONDITIONS
+- [ ] NEED INFORMATION
+- [ ] NEED A DECISION
+- [ ] NEED AUTHORIZATION
+- [ ] STOPPING BECAUSE OF A RISK OR BOUNDARY
 
-## Co je doložené
+## What is supported by evidence
 
-- [pozorovaný fakt a zdroj]
+- [observed fact and source]
 
-## Co chybí nebo si odporuje
+## What is missing or contradictory
 
-- [konkrétní mezera, rozpor nebo hranice]
+- [specific gap, conflict, or boundary]
 
-## Co jsem bezpečně vyzkoušel
+## What I tried safely
 
-- [vratný pokus a jeho výsledek]
+- [reversible attempt and result]
 
-## Proč nepokračuji
+## Why I am not continuing
 
-[Konkrétní následek pokračování bez nové informace nebo oprávnění.]
+[The concrete consequence of continuing without new information or authorization.]
 
-## Možné větve
+## Possible branches
 
-1. [bezpečná větev a její dopad]
-2. [alternativa a její dopad]
+1. [safe branch and impact]
+2. [alternative and impact]
 
-## Jedno potřebné rozhodnutí
+## One decision needed
 
-[Nejmenší otázka, na kterou musí odpovědět oprávněný člověk.]
+[The smallest question for the authorized person.]
 
-## Bezpečný výchozí stav
+## Safe default
 
-[Co zůstane beze změny, pokud odpověď nepřijde.]
+[What remains unchanged if no answer arrives.]
 

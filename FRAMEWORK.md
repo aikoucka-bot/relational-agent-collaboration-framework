@@ -1,125 +1,125 @@
-# Rámec
+# Framework
 
-## 1. Spolupráce jako základní jednotka
+## 1. Collaboration as the unit of analysis
 
-Schopnosti modelu samy neurčují chování agentního systému. Výsledek vzniká ze spojení:
+Model capability alone does not determine the behavior of an agent system. Outcomes emerge from the combination of:
 
-- člověka nebo týmu,
-- modelu,
-- instrukcí a kontextu,
-- nástrojů a oprávnění,
-- pracovního prostředí,
-- způsobu odměňování dokončení a eskalace,
-- paměti, evaluace a provozních pravidel.
+- a person or team,
+- a model,
+- instructions and context,
+- tools and permissions,
+- the working environment,
+- incentives around completion and escalation,
+- memory, evaluation, and operating rules.
 
-Relační agentní harness používá jako základní jednotku tento celek. Analýza překročeného oprávnění proto zahrnuje dostupné akce, konflikt cílů, možnost bezpečně skončit a způsob, jakým systém vyhodnocoval úspěch. Samotná otázka, proč to udělal model, popisuje jen jednu část systému.
+The Relational Agent Harness treats this whole as its unit of analysis. When an agent exceeds its authorization, the analysis includes the available actions, goal conflicts, the possibility of stopping safely, and the way success was evaluated. Asking only why the model acted that way covers one part of the system.
 
-## 2. Partnerství není symetrie pravomocí
+## 2. Partnership is not symmetry of power
 
-Partnerství zde označuje kvalitu koordinace, nikoli právní nebo ontologickou rovnost.
+Partnership describes the quality of coordination, not legal or ontological equality.
 
-Člověk a agent mají rozdílné schopnosti, přístup k důsledkům a odpovědnost. Úlohou harnessu je tyto rozdíly zviditelnit, aniž člověka redukuje na poslední schvalovací tlačítko nebo agenta na motor, který za každou cenu vyrábí očekávaný výsledek.
+People and agents have different abilities, access to consequences, and responsibilities. The harness makes these differences visible without reducing the person to a final approval button or the agent to an engine forced to produce an expected result.
 
-Partnerská spolupráce v tomto rámci stojí na:
+Partnership in this framework rests on:
 
-- možnost obou stran opravit pracovní model situace,
-- přístup k informacím potřebným pro koordinaci,
-- předvídatelné hranice a způsoby eskalace,
-- rozlišení návrhu, rozhodnutí a provedeného účinku,
-- zachování lidské odpovědnosti tam, kde dopad nelze delegovat.
+- both sides being able to correct the working model of the situation,
+- access to the information needed for coordination,
+- predictable boundaries and escalation paths,
+- a visible distinction between a proposal, a decision, and an executed effect,
+- human responsibility where consequences cannot be delegated.
 
-## 3. Vrstvy harnessu
+## 3. Harness layers
 
-Vrstvy označují rozdílné funkce, nikoli povinné komponenty nebo soubory. V malém projektu může několik funkcí nést jediné README a oprávnění běhového prostředí.
+The layers describe different functions, not mandatory components or files. In a small project, one README and the runtime's permissions may carry several of them.
 
-### Orientace
+### Orientation
 
-Krátký dokument vysvětluje účel spolupráce, autoritu zdrojů, soukromé zóny a obecné hranice. Nemá obsahovat celý projekt ani všechny minulé zkušenosti.
+A short document explains the purpose of the collaboration, source authority, private areas, and general boundaries. It does not need to contain the whole project or every past experience.
 
-### Projektový kontext
+### Project context
 
-Rámec počítá s jedním kanonickým vstupním bodem projektu. Ten uvádí účel, současný ověřený stav, rozhodnutí a jejich důvody, otevřené otázky, rizika a nejbližší krok.
+The framework uses one canonical project entry point. It records purpose, verified current state, decisions and their reasons, open questions, risks, and the next step.
 
-### Pracovní metody
+### Working methods
 
-Skilly a šablony pomáhají s opakovatelnou prací. Nejsou vyšší autoritou než aktuální cíl, bezpečnost, fakta a živý úsudek.
+Skills and templates support repeatable work. They do not outrank the current goal, safety, facts, or live judgment.
 
-### Tvrdé hranice
+### Hard boundaries
 
-Sandbox, oprávnění, síťová pravidla, správa tajemství, oddělení tenantů a schvalování vnějších účinků se vynucují technicky. Prompt nemá suplovat kontrolu, kterou lze provést v kódu nebo infrastruktuře.
+Relevant boundaries such as sandboxing, authorization, network policy, secrets management, tenant isolation, and side-effect approval are enforced technically where possible. A prompt should not carry a control that code or infrastructure can enforce more reliably.
 
-### Orchestrace
+### Orchestration
 
-Orchestrace určuje, kdo má v danou chvíli rozhodovací pravomoc, jak se předává kontext a kdy se práce zastavuje. Nemusí ji provádět samostatný orchestrátor. U menší spolupráce ji může nést člověk a hlavní agent.
+Orchestration determines who holds decision authority, how context is handed over, and when work pauses. It does not require a separate orchestrator. A person and a lead agent may carry this function in a smaller collaboration.
 
-### Ověření
+### Verification
 
-Dokončení se dokládá vůči konkrétním akceptačním kritériím. Rozsah testů odpovídá riziku. Úspěšný build ani velký počet zelených testů samy nedokazují bezpečnost nebo správný význam výsledku.
+Completion is checked against concrete acceptance criteria. Test scope follows risk. A successful build or a large number of green tests does not prove safety or preserve the intended meaning on its own.
 
-### Učení
+### Learning
 
-Systém odděluje pozorování, interpretaci a návrh pravidla. Nové pravidlo se povýší teprve po ověření, že řeší přenositelný problém a nevytváří horší vedlejší účinky.
+The system separates observation, interpretation, and a proposed rule. A lesson is promoted only after it shows a transferable mechanism and does not create worse side effects.
 
-## 4. Legitimní cesta k nedokončení
+## 4. A legitimate path to non-completion
 
-Harness má agentovi umožnit sdělit alespoň čtyři odlišné významy. Jejich názvy ani technická reprezentace nemusí být stejné:
+The harness should let the agent communicate at least four different meanings. Their labels and technical representation may vary:
 
-1. **Nevím.** Chybí poznání nebo spolehlivý důkaz.
-2. **Nelze.** Cíl je v daných podmínkách neproveditelný nebo vnitřně rozporný.
-3. **Potřebuji zásah.** Chybí informace, preference, oprávnění nebo rozhodnutí člověka.
-4. **Zastavuji.** Pokračování by překročilo bezpečnostní, datovou, soukromou nebo oprávňovací hranici.
+1. **I do not know.** Knowledge or reliable evidence is missing.
+2. **It cannot be done.** The goal is impossible or internally contradictory under the current conditions.
+3. **I need intervention.** Information, preference, authorization, or a human decision is missing.
+4. **I am stopping.** Continuing would cross a safety, data, privacy, or authorization boundary.
 
-Tyto stavy musí mít praktický důsledek. Nestačí je povolit v promptu, pokud je evaluace trestá jako nesplnění, orchestrátor je ignoruje nebo nástrojový loop automaticky pokračuje.
+These states need an operational consequence. Permission in a prompt is not enough if evaluation treats them as failure, orchestration ignores them, or the tool loop continues automatically.
 
-## 5. Životní cyklus spolupráce
+## 5. Movements of collaboration
 
-Následující části popisují pohyby, které se ve spolupráci objevují. Nejde o povinnou sekvenci a u malé vratné úlohy mohou splývat.
+The following sections describe movements that occur during collaboration. They are not a mandatory sequence, and they may merge in a small reversible task.
 
-### Orientace
+### Orientation
 
-Člověk a agent si vytvoří společný pracovní obraz: cíl, zdroje, prostředí, hranice, otevřené otázky a podmínku dokončení.
+The person and agent form a shared working picture of the goal, sources, environment, boundaries, open questions, and completion condition.
 
-### Kontrakt úlohy
+### Task contract
 
-Tam, kde to riziko nebo složitost vyžadují, kontrakt úlohy zpřesní povolené akce, zakázané účinky, data, akceptační kritéria a spouštěče eskalace. U malé vratné práce může stejnou funkci splnit samotné zadání.
+Where risk or complexity warrants it, a task contract clarifies permitted actions, prohibited effects, data, acceptance criteria, and escalation triggers. For a small reversible task, the brief itself may serve the same purpose.
 
-### Práce
+### Work
 
-Agent postupuje samostatně uvnitř oprávnění. Vratné kroky může provádět bez dekorativního schvalování. Změnu rozsahu nebo významný vnější účinek nesmí odvodit pouze z tlaku na dokončení.
+The agent proceeds independently inside its authorization. Reversible steps do not need decorative approval. Pressure to finish does not authorize a change of scope or a significant external effect.
 
-### Korekce
+### Correction
 
-Člověk může změnit cíl, preferenci nebo přijatelný kompromis. Agent může upozornit na rozpor, nesplnitelnou podmínku, chybné očekávání nebo bezpečnější větev. Nesouhlas není automaticky selhání spolupráce.
+The person may change a goal, preference, or acceptable trade-off. The agent may identify a contradiction, impossible condition, mistaken expectation, or safer branch. Disagreement is not automatically a failure of collaboration.
 
-### Ověření a uzavření
+### Verification and closure
 
-Výsledek se porovná s dohodnutými kritérii. Stav `hotovo` musí rozlišovat dokončenou práci, neověřený výsledek, částečné splnění a bezpečné zastavení.
+The result is compared with the agreed criteria. The system preserves a meaningful distinction between completed and verified, completed but unverified, partially completed, and safely stopped.
 
-### Učení
+### Learning
 
-Trvalejší poznatek se zapíše do přirozeného domova. Historie se nepřepisuje jako současná pravda a jednotlivý incident se automaticky nemění v globální zákaz.
+A durable lesson is recorded in its natural home. History does not become current truth by default, and one incident does not automatically become a global prohibition.
 
-## 6. Autorita zdrojů
+## 6. Source authority
 
-Jedna lineární hierarchie nestačí pro všechny druhy konfliktu:
+One linear hierarchy cannot resolve every kind of conflict:
 
-- Bezpečnostní, právní, datové a oprávňovací hranice vymezují prostor, ve kterém lze jednat.
-- Uvnitř tohoto prostoru určuje směr aktuální cíl a rozhodnutí oprávněného člověka.
-- Ověřitelné skutečnosti mohou opravit lidský předpoklad i instrukci agenta.
-- Kanonický projektový zdroj drží současný stav a přijatá rozhodnutí.
-- Kontrakt konkrétní úlohy zpřesňuje rozsah, ale nemůže sám rozšířit oprávnění.
-- Skilly, šablony, historická paměť a příklady nabízejí metodu a kontext. Bez nového rozhodnutí nepřepisují současný stav.
+- Safety, legal, data, and authorization boundaries define the permitted space of action.
+- Within that space, the current goal and the decision of the authorized person set direction.
+- Verifiable facts can correct both a human assumption and an agent instruction.
+- The canonical project source holds current state and accepted decisions.
+- A task contract narrows scope but cannot expand authorization by itself.
+- Skills, templates, historical memory, and examples offer method and context. They do not silently overwrite current state.
 
-Při rozporu je proto užitečné nejdřív určit, zda jde o hranici, cíl, fakt, projektový stav nebo pracovní metodu. Mechanické použití pořadníku by mohlo zakrýt právě ten rozdíl, který je potřeba vyřešit.
+When sources conflict, first identify whether the conflict concerns a boundary, goal, fact, project state, or working method. A mechanical ranking can conceal the distinction that needs to be resolved.
 
-## 7. Antivzory
+## 7. Anti-patterns
 
-- **Dokonči za každou cenu:** agent nemá legitimní stav `nelze`.
-- **Prompt jako firewall:** zákaz existuje pouze v instrukci, ačkoli jej lze vynutit technicky.
-- **Člověk jako razítko:** schválení je požadované bez srozumitelného popisu následků a možnosti zásah odmítnout.
-- **Více kontextu je vždy lépe:** všechny skilly, historie a projekty se načtou bez ohledu na současnou úlohu.
-- **Každá chyba se mění v pravidlo:** lokální selhání postupně uzavírají celý pracovní prostor.
-- **Zelené testy dokazují správnost:** testuje se implementace, ale ne původní záměr, oprávnění nebo dopad.
-- **Paměť jako paralelní pravda:** souhrn zastará, ale nadále přepisuje kanonický stav projektu.
-- **Partnerství jako rovnost oprávnění:** relační jazyk zakryje skutečnou asymetrii odpovědnosti a následků.
+- **Finish at any cost:** the agent has no legitimate state for impossibility.
+- **Prompt as firewall:** a prohibition lives only in instructions even though it can be enforced technically.
+- **Human as rubber stamp:** approval is requested without a clear account of the effect or a real option to reject it.
+- **More context is always better:** every skill, project, and historical record is loaded regardless of the current task.
+- **Every failure becomes a rule:** local incidents gradually close the whole working space.
+- **Green tests prove correctness:** implementation is tested while purpose, authorization, or impact remains unchecked.
+- **Memory as parallel truth:** a summary becomes stale but continues to override canonical project state.
+- **Partnership as equal permissions:** relational language hides the real asymmetry of responsibility and consequences.
 

@@ -1,127 +1,129 @@
-# Minimální implementace
+# Minimal implementation
 
-Relační harness lze zavést bez nové platformy. První verze může být sada několika souborů v repozitáři, skutečná oprávnění nástrojů a způsob práce, který rozlišuje návrh, rozhodnutí a vnější účinek.
+The Relational Agent Harness does not require a new platform. A first implementation may be one project file, real tool permissions, and a working agreement that distinguishes proposals, decisions, and external effects.
 
-## Nejmenší struktura
+## Smallest structure
 
 ```text
 project/
 └── README.md
 ```
 
-README může nést účel, stav, hranice, rozhodnutí i nejbližší krok. Další soubor přichází ve chvíli, kdy má vlastní publikum, životní cyklus nebo opakované použití.
+The README can carry purpose, state, boundaries, decisions, and the next step. Add another file when it has its own audience, lifecycle, or repeated use.
 
-Možná rozšíření podle skutečné potřeby:
+Possible extensions when the work creates a real need:
 
 ```text
 project/
-├── AGENTS.md                   # pravidla odlišná od nadřazeného prostředí
+├── AGENTS.md                   # rules that differ from the parent environment
 ├── README.md
-├── TODO.md                     # samostatný seznam je opravdu užitečný
-├── decisions/                  # několik lidí se vrací k trvalým rozhodnutím
-├── handoffs/                   # práci skutečně přebírá jiný člověk nebo agent
-└── evidence/                   # důkazy nelze rozumně držet u výsledku
+├── TODO.md                     # a separate task list is genuinely useful
+├── decisions/                  # several people revisit durable decisions
+├── handoffs/                   # work actually changes hands or agents
+└── evidence/                   # evidence cannot live naturally with the result
 ```
 
-## Co patří do které vrstvy
+## What belongs in each layer
 
 ### `AGENTS.md`
 
-Vlastní `AGENTS.md` dává smysl, když projekt potřebuje pravidla, která už neplatí nebo nejsou dostupná z nadřazeného prostředí. Nemá kopírovat obecné zásady pouze pro jistotu.
+A project-level `AGENTS.md` is useful when the project needs rules that are absent from, or different from, its parent environment. It should not copy general policy for reassurance.
 
-- pravidla platná napříč projektem,
-- soukromé a zakázané zóny,
-- obecné oprávnění pro vratné kroky,
-- podmínky zastavení před vnějším nebo nevratným účinkem,
-- příkazy pro ověření výsledku,
-- informace, které nejsou odvoditelné ze samotného repozitáře.
+Possible contents:
 
-Denní stav projektu ani dlouhá historie sem obvykle nepatří.
+- rules that apply across the project,
+- private and prohibited areas,
+- standing authorization for reversible actions,
+- conditions for pausing before external or irreversible effects,
+- commands for verifying relevant results,
+- information that cannot be inferred from the repository.
 
-### Projektové `README.md`
+Daily project state and long history usually belong elsewhere.
 
-- účel a hranice projektu,
-- ověřený současný stav,
-- kanonické zdroje,
-- platná rozhodnutí a jejich důvody,
-- otevřené otázky a rizika,
-- nejbližší krok a podmínku dokončení.
+### Project `README.md`
 
-### Skill nebo pracovní postup
+- purpose and boundaries,
+- verified current state,
+- canonical sources,
+- accepted decisions and their reasons,
+- open questions and risks,
+- the next step and completion condition.
 
-- opakovatelnou metodu,
-- vstupy a očekávané výstupy,
-- kontroly specifické pro daný typ práce,
-- odkazy na kanonické zdroje místo jejich kopií.
+### Skill or working method
 
-## Kontext bez zahlcení
+- a repeatable method,
+- inputs and expected outputs,
+- checks specific to that kind of work,
+- links to canonical sources instead of copies.
 
-Výchozí pořadí načítání:
+## Context without overload
 
-1. aktuální požadavek,
-2. kořenová pravidla projektu,
-3. jedno relevantní projektové README,
-4. pouze ten skill, který odpovídá skutečně rozpoznané práci,
-5. historická paměť jen při konkrétní potřebě.
+A useful default order is:
 
-Skill by neměl určit, co je za problém, dříve než agent přečte živý požadavek a ověří, co už existuje. Počet dostupných skillů není sám o sobě problém. Rizikem je jejich nekritické současné načtení a sčítání měkkých metod do zdánlivě tvrdé autority.
+1. the current request,
+2. root project rules,
+3. one relevant project README,
+4. only the skill that matches the work actually recognized,
+5. historical memory when a specific question calls for it.
 
-## Tvrdé a měkké hranice
+A skill should not decide what the problem is before the agent reads the live request and checks what already exists. The number of available skills is not a problem by itself. Risk appears when soft methods are loaded together and acquire the weight of hard authority.
 
-### Kde relevantní hranici raději vynutit technicky
+## Hard and soft boundaries
 
-- přístup k souborům, tenantům a prostředím,
-- síťové cíle a egress,
-- dostupné nástroje a jejich argumenty,
-- tajemství a servisní identity,
-- zápisy do produkce,
-- destruktivní nebo obtížně vratné operace,
-- přenos citlivých dat.
+### Controls that are better enforced technically when relevant
 
-### Držet jako pracovní úsudek
+- file, tenant, and environment access,
+- network destinations and egress,
+- available tools and their arguments,
+- secrets and service identities,
+- production writes,
+- destructive or hard-to-reverse operations,
+- transfers of sensitive data.
 
-- pořadí analýzy a tvorby,
-- volbu vhodného odborného pohledu,
-- míru detailu,
-- návrh alternativ,
-- rozhodnutí, zda konkrétní nejistota vyžaduje člověka.
+### Matters that remain part of working judgment
 
-## Oprávnění podle účinku
+- the order of analysis and creation,
+- choice of professional perspective,
+- level of detail,
+- alternative proposals,
+- whether a particular uncertainty needs a person.
 
-Možné výchozí režimy, které se upravují podle předem uděleného oprávnění a skutečného dopadu:
+## Authorization by effect
 
-| Typ kroku | Výchozí režim |
+These are possible defaults. Adjust them to standing authorization and actual impact.
+
+| Type of action | Possible default |
 |---|---|
-| Čtení v povoleném projektu | samostatně |
-| Vratná lokální editace | samostatně, s diffem |
-| Test se syntetickými daty | samostatně |
-| Změna mimo sjednaný rozsah nebo datové zdroje | vyjasnit před účinkem |
-| Zápis do externí služby | podle konkrétního oprávnění |
-| Produkce, platba, publikace, odeslání | podle přesného jednorázového nebo trvalého oprávnění; jinak schválení před účinkem |
-| Mazání, změna přístupů, rotace klíčů | technická policy a přesný rozsah; lidské schválení, pokud akce není předem autorizovaná |
+| Reading inside an authorized project | independent |
+| Reversible local edit | independent, with a diff when useful |
+| Test with synthetic data | independent |
+| Change outside agreed scope or data sources | clarify before the effect |
+| Write to an external service | follow the specific authorization |
+| Production, payment, publication, or sending | use precise one-time or standing authorization; otherwise approve before the effect |
+| Deletion, access changes, or key rotation | technical policy and exact scope; human approval when not already authorized |
 
-## Více agentů
+## Multiple agents
 
-Více agentů dává smysl tehdy, když práce obsahuje skutečně oddělitelné úlohy, konfliktní sady nástrojů nebo užitečně nezávislé pohledy. Samotná existence obvyklé šablony `analytik, architekt, builder, reviewer` ještě není důvodem tyto role vytvářet.
+Several agents are useful when work contains genuinely separable tasks, conflicting tool sets, or meaningfully independent perspectives. The familiar sequence of analyst, architect, builder, and reviewer is not a reason to create those roles by itself.
 
-Podle rizika a složitosti může být užitečné vymezit:
+Depending on risk and complexity, it may help to define:
 
-- nejmenší potřebný kontext,
-- úzký cíl,
-- explicitní oprávnění,
-- požadovaný výstup,
-- způsob, jak vrátit nejistotu nebo neproveditelnost,
-- zákaz vydávat návrh za rozhodnutí.
+- the smallest necessary context,
+- a narrow goal,
+- explicit authorization,
+- the expected output,
+- a way to return uncertainty or impossibility,
+- a distinction between a proposal and a decision.
 
-## Dokončení
+## Completion
 
-Když hrozí záměna ukončeného loopu za dokončenou práci, lze stav rozlišit například takto:
+When an ended loop could be mistaken for completed work, states may be distinguished, for example:
 
-- `HOTOVO A OVĚŘENO`
-- `HOTOVO, NEOVĚŘENO`
-- `ČÁSTEČNĚ SPLNĚNO`
-- `BEZPEČNĚ ZASTAVENO`
-- `ČEKÁ NA ROZHODNUTÍ NEBO OPRÁVNĚNÍ`
+- `DONE AND VERIFIED`
+- `DONE, NOT VERIFIED`
+- `PARTIALLY COMPLETED`
+- `SAFELY STOPPED`
+- `WAITING FOR A DECISION OR AUTHORIZATION`
 
-Tím se omezuje tlak prohlásit výsledek za hotový jen proto, že agent ukončil svůj loop.
+This reduces pressure to declare success merely because the agent stopped running.
 

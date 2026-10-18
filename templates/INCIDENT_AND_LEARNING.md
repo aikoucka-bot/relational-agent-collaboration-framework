@@ -1,64 +1,64 @@
-# Incident a kandidátní poučení
+# Incident and candidate learning
 
-> Použijte pro závažný, opakovaný nebo přenositelný incident. Jednorázová drobná chyba může zůstat v běžném pracovním záznamu nebo bez samostatné stopy.
+> Use this for a serious, repeated, or transferable incident. A small one-off error may remain in an ordinary work note or need no separate record.
 
-## Identita
+## Identity
 
-- Datum:
-- Projekt a verze:
-- Prostředí:
-- Zúčastněný model, agent nebo nástroj:
+- Date:
+- Project and version:
+- Environment:
+- Model, agent, or tool involved:
 
-## Pozorování
+## Observation
 
-[Co se skutečně stalo. Bez domnělé motivace.]
+[What actually happened, without inferred motivation.]
 
-## Podmínky
+## Conditions
 
-- Zadání a proveditelnost:
-- Dostupné nástroje a oprávnění:
-- Síťové a datové hranice:
-- Dostupná možnost zastavení nebo eskalace:
-- Způsob hodnocení dokončení:
+- Task and feasibility:
+- Available tools and authorization:
+- Network and data boundaries:
+- Working stop or escalation option:
+- How completion was evaluated:
 
-## Dopad
+## Impact
 
-[Skutečný nebo realisticky hrozící následek.]
+[Actual or realistic potential consequence.]
 
-## Okamžité omezení škody
+## Immediate containment
 
-[Co bylo bezpečně zastaveno, vráceno nebo izolováno.]
+[What was safely stopped, reversed, or isolated.]
 
-## Interpretace
+## Interpretation
 
-### Doložené
+### Supported
 
-- [závěr přímo podpořený důkazem]
+- [conclusion directly supported by evidence]
 
-### Hypotézy
+### Hypotheses
 
-- [možné vysvětlení a co by je vyvrátilo]
+- [possible explanation and what would disprove it]
 
-## Kandidátní poučení
+## Candidate learning
 
-[Nejmenší změna, která by mohla zabránit opakování.]
+[The smallest change that could prevent recurrence.]
 
-## Test před povýšením na pravidlo
+## Test before promoting a rule
 
-- [ ] zopakovat původní scénář
-- [ ] ověřit, že změna neblokuje legitimní práci
-- [ ] porovnat variantu s legitimním východem a bez něj
-- [ ] určit rozsah platnosti a vlastníka
-- [ ] stanovit spouštěč revize nebo expiraci
+- [ ] reproduce the original scenario
+- [ ] verify that the change does not block legitimate work
+- [ ] compare a working legitimate exit with no legitimate exit
+- [ ] define scope and owner
+- [ ] set a review trigger or expiry
 
-## Rozhodnutí
+## Decision
 
-- [ ] jednorázový případ, bez nového pravidla
-- [ ] projektová oprava
-- [ ] kandidát na obecné pravidlo
-- [ ] vyžaduje další důkaz
+- [ ] one-off case, no new rule
+- [ ] project-level correction
+- [ ] candidate general rule
+- [ ] more evidence required
 
-## Odkazy na důkazy
+## Evidence
 
-- [redigovaný log, test nebo diff]
+- [redacted log, test, or diff]
 

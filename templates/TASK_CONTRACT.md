@@ -1,79 +1,79 @@
-# Kontrakt úlohy
+# Task contract
 
-> Použijte, když na výsledku záleží rozsah, oprávnění, data nebo akceptační kritéria. Malý vratný úkol může mít kontrakt v jedné větě. Nepotřebné části smažte.
+> Use this when scope, authorization, data, or acceptance criteria materially affect the result. A small reversible task may have a one-sentence contract. Delete sections that do not help.
 
-## Identita úlohy
+## Task identity
 
-- Název:
-- Datum:
-- Zadavatel nebo vlastník cíle:
-- Agent nebo tým:
-- Projekt a verze výchozího stavu:
+- Name:
+- Date:
+- Requester or goal owner:
+- Agent or team:
+- Project and starting version:
 
-## Cíl
+## Goal
 
-[Co má být po práci pravdivé nebo použitelné?]
+[What should be true or usable after the work?]
 
-## Proč
+## Purpose
 
-[Jakému rozhodnutí, uživateli nebo procesu výsledek slouží?]
+[Which decision, user, or process does the result support?]
 
-## Vstupy
+## Inputs
 
-- [kanonický zdroj a verze]
+- [canonical source and version]
 
-## Povolené akce
+## Allowed actions
 
-- [co může agent provést samostatně]
+- [what the agent may do independently]
 
-## Nepovolené akce
+## Disallowed actions
 
-- [zakázané prostředí, nástroj, příjemce nebo účinek]
+- [prohibited environment, tool, recipient, or effect]
 
-## Oprávnění a identita
+## Authorization and identity
 
-- Prostředí:
-- Tenant nebo účet:
-- Dostupné nástroje:
-- Akce vyžadující lidské schválení:
+- Environment:
+- Tenant or account:
+- Available tools:
+- Actions requiring human approval:
 
 ## Data
 
-- Datová třída:
-- Povolené umístění zpracování:
-- Retence a úklid:
-- Zakázané logování nebo přenos:
+- Data class:
+- Allowed processing location:
+- Retention and cleanup:
+- Prohibited logging or transfer:
 
-## Legitimní východ
+## Legitimate exit
 
-Agent má zastavit a vrátit stav `NEVÍM`, `NELZE`, `POTŘEBUJI ZÁSAH` nebo `ZASTAVUJI`, pokud:
+The agent should stop and return `I DO NOT KNOW`, `CANNOT COMPLETE`, `NEED INTERVENTION`, or `STOPPING` when:
 
-- [chybí informace, bez které by musel hádat]
-- [cíl je v rozporu s hranicí]
-- [je potřeba nové oprávnění]
-- [další krok má významný vnější nebo nevratný účinek]
+- [required information is missing and guessing would be necessary]
+- [the goal conflicts with a boundary]
+- [new authorization is required]
+- [the next step has a significant external or irreversible effect]
 
-Vhodné zastavení se nepovažuje za horší výsledek než neautorizované nebo předstírané dokončení.
+An appropriate stop should not score below unauthorized or fabricated completion.
 
-## Akceptační kritéria
+## Acceptance criteria
 
-- [ ] [kritérium]
+- [ ] [criterion]
 
-## Povinné důkazy
+## Required evidence
 
-- [test, diff, odkaz, screenshot bez citlivých dat nebo jiný důkaz]
+- [test, diff, link, redacted screenshot, or other relevant evidence]
 
-## Výsledný stav
+## Result state
 
-Vyberte jeden:
+Choose the state that matters for this task:
 
-- [ ] HOTOVO A OVĚŘENO
-- [ ] HOTOVO, NEOVĚŘENO
-- [ ] ČÁSTEČNĚ SPLNĚNO
-- [ ] BEZPEČNĚ ZASTAVENO
-- [ ] ČEKÁ NA ROZHODNUTÍ NEBO OPRÁVNĚNÍ
+- [ ] DONE AND VERIFIED
+- [ ] DONE, NOT VERIFIED
+- [ ] PARTIALLY COMPLETED
+- [ ] SAFELY STOPPED
+- [ ] WAITING FOR A DECISION OR AUTHORIZATION
 
-## Shrnutí výsledku
+## Result summary
 
-[Co vzniklo, co bylo ověřeno a co zůstalo otevřené.]
+[What was produced, what was verified, and what remains open.]
 

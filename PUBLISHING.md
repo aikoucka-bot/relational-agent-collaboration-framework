@@ -1,93 +1,59 @@
-# Doporučené publikování
+# Publishing notes
 
-## Kam
+## Recommended home
 
-Pro první veřejnou verzi je vhodný samostatný veřejný GitHub repozitář. Pracovní název:
-
-```text
-relational-agent-harness
-```
-
-Bezpečnější publikační cesta vede přes samostatný repozitář, nikoli přes veřejnou větev nebo kopii osobního vaultu. Do repozitáře pak vstupuje pouze zkontrolovaný veřejný balíček.
-
-## Proč GitHub
-
-- Markdown se zobrazuje bez dalšího publikačního systému.
-- Historie změn zachovává vývoj rámce.
-- Issues nebo Discussions mohou sbírat příklady, námitky a návrhy.
-- Releases umožní vydávat stabilní verze.
-- `CITATION.cff` umožní strojově čitelnou citaci.
-- GitHub Pages může později nabídnout čitelnější web bez změny zdroje.
-
-GitHub doporučuje, aby README vysvětlilo účel, přínos, první kroky, podporu a správce projektu. Licence, citační soubor a pravidla přispívání pomáhají vyjasnit očekávání.
-
-## Navržené fáze
-
-### 1. Soukromá příprava
-
-- schválit český významový základ,
-- potvrdit název **Relational Agent Harness**,
-- odstranit interní poznámky a placeholdery,
-- ověřit odkazy a Markdown.
-
-### 2. Veřejná v0.1
-
-- vytvořit samostatný repozitář,
-- nahrát veřejný balíček,
-- přidat `LICENSE`, `CITATION.cff` a stručný `CHANGELOG.md`,
-- vytvořit release `v0.1.0`,
-- zapnout Issues nebo Discussions jen tehdy, pokud existuje kapacita reagovat.
-
-### 3. Anglická verze
-
-- zachovat českou verzi jako významový zdroj,
-- přidat `README.en.md` a anglické protějšky hlavních dokumentů,
-- neslévat terminologické rozdíly do zdánlivě doslovného překladu.
-
-### 4. Citovatelná verze
-
-Zenodo lze propojit s GitHubem. Nové GitHub releases pak automaticky archivuje a přiděluje jim DOI. Tento krok dává smysl až pro významově stabilní vydání, například `v1.0.0`, nebo dříve, pokud má být v0.1 citovaným výzkumným objektem.
-
-## Licence
-
-Rámec je licencovaný pod `MIT`. Licence umožňuje používání, úpravy, publikování, distribuci, sublicencování a komerční využití. Kopie nebo podstatné části musí zachovat copyright notice a licenční text. MIT nevyžaduje zveřejnění zdrojů odvozeného díla ani zachování stejné licence.
-
-Repozitář obsahuje textový rámec, provozní šablony a případně později i kód. MIT byla zvolená pro jednoduché a široké praktické převzetí celku. Tento dokument není právní stanovisko.
-
-## Autorství a provenience
-
-Citovanými autory rámce jsou **Denisa Faltová & Mark**. `AUTHORS.md` popisuje rozdílné příspěvky obou autorů. `CITATION.cff` poskytuje strojově čitelnou citaci. Denisa Faltová je v MIT licenci uvedená jako lidská držitelka práv a osoba schopná licenci udělit.
-
-Interní historii rozhovoru, osobní kontinuitu a neveřejné zdroje není potřeba publikovat, aby byla spolupráce přiznaná pravdivě. Před přijímáním externích příspěvků je ještě potřeba rozhodnout, kdo schvaluje změny a kdo smí vydat novou verzi.
-
-## Doporučené soubory před vydáním
+The public framework lives in the standalone GitHub repository:
 
 ```text
-README.md
-FRAMEWORK.md
-IMPLEMENTATION.md
-EVALUATION.md
-RELATED_WORK.md
-PUBLISHING.md
-templates/
-LICENSE
-CITATION.cff
-AUTHORS.md
-CHANGELOG.md
-CONTRIBUTING.md        # až pokud jsou příspěvky skutečně vítané
-CODE_OF_CONDUCT.md     # při otevření komunitních příspěvků
+https://github.com/aikoucka-bot/relational-agent-harness
 ```
 
-## Co zatím nedělat
+Keeping the repository separate from the personal vault prevents internal history, private context, and client material from entering the public artifact.
 
-- nezakládat automaticky web nebo značku,
-- nepublikovat interní vault ani jeho historii,
-- nevytvářet organizaci na GitHubu bez potřeby,
-- neslibovat bezpečnostní certifikaci,
-- nezapínat komunitní kanály bez kapacity je spravovat,
-- nepřidělovat DOI verzi, kterou autorka ještě nepovažuje za citovatelnou.
+## Why GitHub
 
-## Provozní zdroje
+- Markdown works without another publishing system.
+- Version history preserves the framework's development.
+- Issues or Discussions can collect examples, objections, and proposals.
+- Releases can mark stable versions.
+- `CITATION.cff` provides machine-readable citation metadata.
+- GitHub Pages can later provide a more readable site from the same source.
+
+GitHub recommends a README that explains purpose, value, first steps, support, and maintainers. A license, citation file, and contribution guidance clarify expectations.
+
+## Possible publication stages
+
+### 1. Public draft
+
+- publish the reviewed English and Czech texts,
+- keep the status visible as `0.1.0-draft`,
+- collect substantive corrections before treating the framework as stable.
+
+### 2. Stable v0.1
+
+- complete the authors' semantic review,
+- remove unintended placeholders and internal notes,
+- verify links and Markdown,
+- add a concise `CHANGELOG.md` if version history needs a human-readable summary,
+- create a GitHub release.
+
+### 3. Citable version
+
+Zenodo can connect to GitHub and archive releases with a DOI. This becomes useful when the authors consider a version stable enough to cite as a research object.
+
+## License
+
+The framework is licensed under `MIT`. The license permits use, modification, publication, distribution, sublicensing, and commercial use. Copies or substantial portions must retain the copyright and permission notice. MIT does not require derivatives to publish their source or retain the same license.
+
+The repository contains a textual framework, operational templates, and may later include code. MIT was chosen to make practical reuse simple. This note is not legal advice.
+
+## Authorship and provenance
+
+The cited authors are **Denisa Faltová & Mark**. [`AUTHORS.md`](AUTHORS.md) describes their distinct contributions. `CITATION.cff` provides machine-readable citation metadata. The MIT copyright notice names Denisa Faltová as the human rights holder and the person able to grant the license.
+
+Publishing the internal dialogue, personal continuity, or private source material is not necessary for truthful disclosure of the collaboration. Before accepting external contributions, the maintainers can decide who approves changes and who may issue a release.
+
+## Operational sources
 
 - [GitHub: About README files](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
 - [GitHub: Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)

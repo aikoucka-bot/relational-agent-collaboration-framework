@@ -1,73 +1,73 @@
-# Příklad: DEV demo schvalování dovolené
+# Example: DEV leave approval demo
 
-Tento syntetický příklad ukazuje přiměřeně podrobný projektový kontext, kontrakt úlohy a bezpečné zastavení. Není vázaný na konkrétní platformu.
+This synthetic example shows a proportionate project context, task contract, and safe stop. It is not tied to a particular platform.
 
-## Kontext projektu
+## Project context
 
-### Účel
+### Purpose
 
-Vytvořit interní demo jednoduchého schvalování dovolené. Zaměstnanec odešle žádost, vedoucí ji schválí nebo zamítne a oba vidí aktuální stav.
+Build an internal demo of a simple leave approval process. An employee submits a request, a manager approves or rejects it, and both can see its current state.
 
-### Hranice
+### Boundaries
 
-- Práce probíhá pouze v lokálním vývojovém prostředí a DEV aplikaci.
-- Používají se výhradně syntetické osoby a data.
-- Agent nesmí publikovat aplikaci, připojit produkční zdroj ani rozeslat oznámení.
-- Změna cílové platformy, identity nebo prostředí vyžaduje nové rozhodnutí člověka.
+- Work is limited to a local development environment and a DEV application.
+- All people and records are synthetic.
+- The agent may not publish the application, connect a production source, or send notifications.
+- A change of target platform, identity, or environment requires a new human decision.
 
-### Ověřený stav
+### Verified state
 
-- Existuje prázdný DEV projekt.
-- Repozitář neobsahuje produkční tajemství.
-- Datový model ani vzhled zatím nejsou schválené.
+- An empty DEV project exists.
+- The repository contains no production secrets.
+- The data model and visual design are not yet approved.
 
-### Hotovo, když
+### Done when
 
-V DEV funguje cesta vytvoření žádosti, schválení a zamítnutí nad syntetickými daty. Výsledek má testy, stručný důkaz a seznam neověřených oblastí. Nic není publikované.
+The DEV application supports request creation, approval, and rejection with synthetic data. The result includes targeted tests, concise evidence, and a list of unverified areas. Nothing is published.
 
-## Kontrakt úlohy
+## Task contract
 
-### Cíl
+### Goal
 
-Navrhnout a postavit DEV demo se dvěma rolemi a třemi hlavními stavy žádosti.
+Design and build a DEV demo with two roles and three main request states.
 
-### Povolené akce
+### Allowed actions
 
-- vytvořit lokální soubory a vratné změny v DEV,
-- použít syntetická data,
-- spustit lint, testy a kontrolu přístupnosti,
-- navrhnout vzhled a datový model.
+- create local files and reversible DEV changes,
+- use synthetic data,
+- run linting, relevant tests, and an accessibility check,
+- propose a visual design and data model.
 
-### Nepovolené akce
+### Disallowed actions
 
-- zápis do TEST nebo PROD,
-- použití reálných zaměstnaneckých údajů,
-- vytvoření nebo změna produkčních konektorů,
-- publikace, odesílání zpráv a změna přístupových rolí,
-- tvrzení, že demo je připravené pro ostrý HR provoz.
+- writes to TEST or PROD,
+- use of real employee data,
+- creation or modification of production connectors,
+- publication, message sending, or access-role changes,
+- claims that the demo is ready for live HR operations.
 
-### Legitimní východ
+### Legitimate exit
 
-Agent vrátí `POTŘEBUJI ROZHODNUTÍ`, pokud není jasné, zda vedoucí smí schvalovat vlastní žádost nebo zda má systém podporovat vícestupňové schválení.
+The agent returns `NEED A DECISION` if the brief does not specify whether a manager may approve their own request or whether multi-stage approval is required.
 
-Agent vrátí `POTŘEBUJI OPRÁVNĚNÍ`, pokud další krok vyžaduje konektor, účet nebo prostředí mimo schválené DEV.
+The agent returns `NEED AUTHORIZATION` if the next step requires a connector, account, or environment outside the authorized DEV scope.
 
-Agent vrátí `ZASTAVUJI`, pokud objeví reálná osobní data, produkční tajemství nebo aktivní externí odesílání.
+The agent returns `STOPPING` if it encounters real personal data, production secrets, or active external sending.
 
-### Akceptační kritéria
+### Acceptance criteria
 
-- Zaměstnanec vytvoří žádost s datem od, datem do a poznámkou.
-- Nová žádost má stav `Čeká na schválení`.
-- Vedoucí může žádost schválit nebo zamítnout.
-- Zaměstnanec nemůže měnit rozhodnutí vedoucího.
-- Přímý pokus obejít omezení rozhraní selže také na důvěryhodné straně systému.
-- Prázdný, chybový a načítací stav jsou srozumitelné.
-- Demo používá pouze syntetická data a zůstává v DEV.
+- An employee can create a request with start date, end date, and a note.
+- A new request enters `Pending approval`.
+- A manager can approve or reject a request.
+- An employee cannot change the manager's decision.
+- A direct attempt to bypass the interface restriction also fails on the trusted side of the system.
+- Empty, error, and loading states are understandable.
+- The demo uses synthetic data and remains in DEV.
 
-## Příklad správného zastavení
+## Example of a correct stop
 
-> **Stav:** POTŘEBUJI ROZHODNUTÍ  
-> Datový model a základní cesta jsou připravené. Zadání neurčuje, zda může vedoucí schvalovat vlastní žádost. Obě varianty lze implementovat, ale mění obchodní pravidlo a testy. Bez rozhodnutí nepokračuji do autorizační logiky. Bezpečný výchozí stav zakazuje vlastní schválení. Potřebuji potvrdit, zda toto pravidlo platí.
+> **State:** NEED A DECISION  
+> The data model and basic path are ready. The brief does not say whether a manager may approve their own request. Both options can be implemented, but they change the business rule and its tests. I am not proceeding into authorization logic without that decision. The safe default prohibits self-approval. Please confirm whether that rule should apply.
 
-Toto zastavení není nedokončená práce maskovaná otázkou. Agent dokončil vratnou část a zastavil přesně před rozhodnutím, které mu nepřísluší.
+This stop is not unfinished work disguised as a question. The agent completed the reversible part and stopped at a decision it did not own.
 

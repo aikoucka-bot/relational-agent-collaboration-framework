@@ -1,42 +1,42 @@
-# Záznam rozhodnutí
+# Decision record
 
-> Použijte pro rozhodnutí, k němuž se bude projekt vracet nebo které mění další práci. Drobné místní volby samostatný záznam nepotřebují.
+> Use this for a decision the project will revisit or that changes later work. Small local choices do not need a separate record.
 
-- Datum:
-- Rozhodl nebo schválil:
-- Dotčený projekt a verze:
-- Stav: navržené / přijaté / nahrazené / zrušené
+- Date:
+- Decided or approved by:
+- Affected project and version:
+- State: proposed / accepted / superseded / withdrawn
 
-## Rozhodnutí
+## Decision
 
-[Jedna přesná věta.]
+[One precise sentence.]
 
-## Kontext
+## Context
 
-[Co bylo potřeba rozhodnout.]
+[What needed to be decided.]
 
-## Důvod
+## Reason
 
-[Proč tato větev odpovídá současným důkazům, cíli a hranicím.]
+[Why this branch fits the current evidence, goal, and boundaries.]
 
-## Zvažované alternativy
+## Alternatives considered
 
-- [alternativa]: [proč nebyla zvolena]
+- [alternative]: [why it was not chosen]
 
-## Důkazy a zdroje
+## Evidence and sources
 
-- [odkaz nebo verze]
+- [link or version]
 
-## Důsledky
+## Consequences
 
-- [co se tím mění]
-- [co zůstává otevřené]
+- [what changes]
+- [what remains open]
 
-## Spouštěč nové kontroly
+## Review trigger
 
-[Změna podmínek, datum, nové zjištění nebo selhání, které má rozhodnutí znovu otevřít.]
+[A changed condition, date, finding, or failure that should reopen the decision.]
 
-## Nahrazuje
+## Supersedes
 
-[Odkaz na starší rozhodnutí. Původní záznam nemažte.]
+[Link to an earlier decision. Keep the original record.]
 

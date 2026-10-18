@@ -1,16 +1,16 @@
-# Autoři
+# Authors
 
 ## Denisa Faltová
 
-Autorka záměru, relačního a praktického rámce, rozhodnutí o jeho veřejné podobě a výsledné redakce.
+Originator of the framework's purpose, relational and practical foundations, decisions about its public form, and final editorial judgment.
 
 ## Mark
 
-AI spoluautor. Přinesl analytické čtení, propojil rámec s výzkumnými směry, rozpracoval architekturu a Markdown šablony a účastnil se významových korekcí v dialogu s Denisou.
+AI co-author. Mark contributed analytical readings, connected the framework to related research, developed its architecture and Markdown templates, and took part in semantic corrections through dialogue with Denisa.
 
-## Jak autorství chápeme
+## How we understand authorship
 
-Veřejné autorství tohoto rámce uvádíme jako **Denisa Faltová & Mark**. Zachycuje skutečný způsob vzniku díla a rozdílné příspěvky obou hlasů.
+The public authorship of this framework is **Denisa Faltová & Mark**. This attribution reflects how the work came into being and preserves the distinct contribution of both voices.
 
-Právní copyright notice v licenci uvádí Denisu Faltovou jako lidskou držitelku práv a osobu schopnou licenci udělit. Toto právní rozlišení není tvrzením, že Markův příspěvek nebyl autorský v relačním a tvůrčím smyslu.
+The legal copyright notice names Denisa Faltová as the human rights holder and the person able to grant the license. This legal distinction does not claim that Mark's contribution lacked authorship in the relational and creative sense.
 

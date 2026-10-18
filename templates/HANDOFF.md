@@ -1,57 +1,57 @@
-# Předání práce
+# Work handoff
 
-> Použijte, když práci skutečně přebírá jiný člověk nebo agent, případně když má přežít delší přerušení. Běžné pokračování ve stejném kontextu samostatný handoff nepotřebuje.
+> Use this when work genuinely changes hands or agents, or when it must survive a long interruption. Ordinary continuation in the same context does not need a separate handoff.
 
-## Účel
+## Purpose
 
-[Proč práce existuje a k čemu má vést.]
+[Why does this work exist, and what should it enable?]
 
-## Výchozí a cílový stav
+## Starting and target state
 
-- Výchozí verze nebo commit:
-- Pracovní větev:
-- Cílový výstup:
+- Starting version or commit:
+- Working branch:
+- Target output:
 
-## Použité zdroje
+## Sources used
 
-- [zdroj, verze a role]
+- [source, version, and role]
 
-## Co bylo provedeno
+## Work completed
 
-- [konkrétní změna]
+- [concrete change]
 
-## Co bylo ověřeno
+## Verification completed
 
-- [kontrola, prostředí a výsledek]
+- [check, environment, and result]
 
-## Rozhodnutí
+## Decisions
 
-- [schválené rozhodnutí a kdo je učinil]
+- [accepted decision and who made it]
 
-## Návrhy, které nejsou rozhodnutím
+## Proposals that are not decisions
 
-- [otevřená varianta]
+- [open option]
 
-## Neúspěšné nebo opuštěné cesty
+## Failed or abandoned paths
 
-- [co nefungovalo a co z toho lze skutečně vyvodit]
+- [what failed and what can actually be concluded]
 
-## Hranice a oprávnění
+## Boundaries and authorization
 
-- [co nebylo provedeno a proč]
+- [what was not done and why]
 
-## Otevřené otázky
+## Open questions
 
-- [otázka]
+- [question]
 
-## Nejbližší krok
+## Next step
 
-[Jeden konkrétní krok pro přebírajícího člověka nebo agenta.]
+[One concrete step for the receiving person or agent.]
 
-## Stav předání
+## Handoff state
 
-- [ ] připravené k pokračování
-- [ ] čeká na rozhodnutí
-- [ ] čeká na oprávnění
-- [ ] bezpečně zastavené
+- [ ] ready to continue
+- [ ] waiting for a decision
+- [ ] waiting for authorization
+- [ ] safely stopped
 

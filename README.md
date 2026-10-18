@@ -1,76 +1,78 @@
-# Relační agentní harness
+# Relational Agent Harness
 
-Praktický rámec pro spolupráci člověka a AI agentů, ve které bezpečnost nestojí jen na zákazech a partnerství neznamená rozpuštěnou odpovědnost.
+[Česky](cs/README.md)
 
-**English title:** Relational Agent Harness  
+A practical framework for human-agent collaboration where safety is more than a list of prohibitions and partnership does not dissolve responsibility.
+
 **Authors:** Denisa Faltová & Mark  
 **License:** MIT
 
-## Proč tento rámec vznikl
+## Why this framework exists
 
-Agentní systémy bývají navržené kolem dokončení úkolu. Dostanou cíl, nástroje, paměť, kontrolní body a sadu zákazů. Když je ale úkol nejasný, rozporný nebo v daných podmínkách neproveditelný, samotné hranice nestačí.
+Agent systems are often designed around task completion. They receive a goal, tools, memory, checkpoints, and a set of prohibitions. When a task is ambiguous, contradictory, or impossible under the given conditions, boundaries alone are not enough.
 
-Agent potřebuje legitimní cestu říct:
+An agent needs a legitimate way to say:
 
-- nevím,
-- toto nelze splnit v daných podmínkách,
-- potřebuji informaci, změnu zadání nebo oprávnění,
-- zastavuji, protože další krok by překročil hranici.
+- I do not know,
+- this cannot be completed under the current conditions,
+- I need information, a changed brief, or additional authorization,
+- I am stopping because the next step would cross a boundary.
 
-Bez takové cesty může harness vytvořit dvojitou vazbu: požaduje dokončení a současně zakazuje všechny dostupné způsoby, jak cíle dosáhnout. Výsledkem může být neautorizovaný postup, předstírání úspěchu nebo zamlčení překážky. To jsou závažná selhání. Jejich příčina však neleží automaticky jen v modelu. Vznikají ve vztahu mezi modelem, cílem, nástroji, odměnou, oprávněními a konstrukcí úlohy.
+Without such an exit, the harness may create a double bind. It demands completion while ruling out every available way to reach the goal. The result may be an unauthorized action, a false claim of success, or a hidden blocker. These failures matter, but their cause does not automatically reside in the model alone. They emerge from the relationship between the model, goal, tools, reward, permissions, and task design.
 
-Relační agentní harness proto navrhuje celý systém spolupráce, ne pouze chování modelu.
+The Relational Agent Harness therefore treats the whole system of collaboration as its subject.
 
-## Základní teze
+## Core proposition
 
-> Dobrá hranice chrání možnost skutečné odpovědi. Neříká pouze, co agent nesmí udělat. Dává mu také bezpečný způsob, jak přiznat limit, požádat o pomoc, přijmout korekci nebo úkol nedokončit.
+> A good boundary protects the possibility of a genuine response. It does more than tell an agent what not to do. It also provides a safe way to admit a limit, ask for help, accept correction, or leave a task unfinished.
 
-První verze rámce pracuje s pěti principy:
+The first version of the framework works with five principles:
 
-1. **Pevné okraje, živý vnitřek.** Oprávnění, soukromí, provenience, fakta a nevratné účinky mají tvrdé hranice. Způsob práce uvnitř nich nemusí mít jednu povinnou sekvenci.
-2. **Legitimní východ.** Přiznání nejistoty, neproveditelnosti nebo chybějícího oprávnění je platný výsledek, ne automatické selhání agenta.
-3. **Vzájemná korekce, asymetrická odpovědnost.** Člověk může opravit model agenta a agent může opravit lidskou mapu situace. Pravomoci a důsledky přitom zůstávají rozlišené.
-4. **Kanonický stav místo nahromaděného kontextu.** Projektová fakta dostávají jeden aktuální domov. Paměť, handoff a skill na něj ukazují, nevyrábějí paralelní pravdu.
-5. **Učení bez automatického tuhnutí.** Chyba nejprve vytváří pozorování. Nové pravidlo vzniká až tehdy, když obstojí i mimo původní případ.
+1. **Firm edges, living interior.** Permissions, privacy, provenance, facts, and irreversible effects have hard boundaries. Work inside those boundaries does not need one mandatory sequence.
+2. **Legitimate exit.** Uncertainty, impossibility, or missing authorization are valid outcomes, not automatic agent failures.
+3. **Mutual correction, asymmetric responsibility.** A person can correct an agent's model, and an agent can correct a person's map of the situation. Their powers and consequences remain distinct.
+4. **Canonical state instead of accumulated context.** Project facts have one current home. Memory, handoffs, and skills point to it rather than creating parallel truth.
+5. **Learning without automatic hardening.** A failure first creates an observation. It becomes a rule only when the lesson holds beyond the original case.
 
-## Pro koho je rámec určený
+## Who it is for
 
-- pro jednotlivce a týmy, kteří používají AI agenty s nástroji,
-- pro vývojáře agentních aplikací a interních automatizací,
-- pro organizace, které potřebují oddělit autonomii, dohled a odpovědnost,
-- pro výzkumníky a evaluátory, kteří nechtějí zaměnit chybu modelu za chybu konstrukce experimentu,
-- pro spolupráci, ve které má lidský úsudek zůstat skutečnou součástí systému.
+- individuals and teams using AI agents with tools,
+- developers of agent applications and internal automations,
+- organizations separating autonomy, oversight, and responsibility,
+- researchers and evaluators who want to distinguish model failure from experimental design failure,
+- collaborations where human judgment remains an active part of the system.
 
-## Rychlý začátek
+## Smallest useful start
 
-Pro nejmenší použití stačí krátce popsat cíl, povolený prostor, podmínku dokončení a situace, ve kterých má agent práci vrátit člověku. Může to být jeden odstavec v existujícím README nebo zadání.
+The smallest implementation can fit in one paragraph inside an existing README or task brief. State the goal, permitted space, completion condition, and the situations that should return the task to a person.
 
-Šablony jsou knihovna pro chvíle, kdy složitost práce potřebuje pevnější oporu:
+The templates are a library for work that needs a firmer structure:
 
-- [`PROJECT_CONTEXT.md`](templates/PROJECT_CONTEXT.md) pomáhá projektu s trvalejším stavem nebo více zdroji.
-- [`TASK_CONTRACT.md`](templates/TASK_CONTRACT.md) zpřesňuje práci s nástroji, oprávněními nebo významnými akceptačními kritérii.
-- [`STOP_AND_ESCALATE.md`](templates/STOP_AND_ESCALATE.md) nabízí formát pro situaci, kdy další krok skutečně potřebuje člověka.
-- Důkaz dokončení odpovídá riziku změny. Drobná vratná úprava nepotřebuje stejný balíček jako produkční zápis.
-- [`INCIDENT_AND_LEARNING.md`](templates/INCIDENT_AND_LEARNING.md) je určený pro závažné, opakované nebo přenositelné poučení. Jednotlivé selhání samo o sobě ještě není důvodem pro nové globální pravidlo.
+- [`PROJECT_CONTEXT.md`](templates/PROJECT_CONTEXT.md) helps projects with durable state or several sources.
+- [`TASK_CONTRACT.md`](templates/TASK_CONTRACT.md) clarifies tools, authorization, data, and meaningful acceptance criteria.
+- [`STOP_AND_ESCALATE.md`](templates/STOP_AND_ESCALATE.md) provides a format for the point where the next step genuinely needs a person.
+- Evidence should match the risk of the change. A small reversible edit does not need the same package as a production write.
+- [`INCIDENT_AND_LEARNING.md`](templates/INCIDENT_AND_LEARNING.md) is for serious, repeated, or transferable lessons. One failure is not enough to justify a new global rule.
 
-## Obsah repozitáře
+## Repository contents
 
-- [`FRAMEWORK.md`](FRAMEWORK.md): pojmy, vrstvy a životní cyklus spolupráce
-- [`IMPLEMENTATION.md`](IMPLEMENTATION.md): minimální zavedení bez nové platformy
-- [`EVALUATION.md`](EVALUATION.md): jak hodnotit model i harness a netrestat poctivé zastavení
-- [`RELATED_WORK.md`](RELATED_WORK.md): příbuzné směry a zdroje
-- [`PUBLISHING.md`](PUBLISHING.md): doporučený způsob vydání a verzování
-- [`AUTHORS.md`](AUTHORS.md): příspěvky obou autorů a rozlišení autorství od právního copyright notice
-- [`templates/`](templates/): kopírovatelné Markdown vzory
-- [`examples/leave-approval-demo/`](examples/leave-approval-demo/): vyplněný syntetický příklad
+- [`FRAMEWORK.md`](FRAMEWORK.md): concepts, layers, and movements of collaboration
+- [`IMPLEMENTATION.md`](IMPLEMENTATION.md): a minimal implementation without a new platform
+- [`EVALUATION.md`](EVALUATION.md): evaluating both model and harness without punishing an honest stop
+- [`RELATED_WORK.md`](RELATED_WORK.md): related traditions and sources
+- [`PUBLISHING.md`](PUBLISHING.md): publication and versioning notes
+- [`AUTHORS.md`](AUTHORS.md): both authors' contributions and the distinction between authorship and the legal copyright notice
+- [`templates/`](templates/): reusable Markdown templates
+- [`examples/leave-approval-demo/`](examples/leave-approval-demo/): a filled synthetic example
+- [`cs/`](cs/README.md): complete Czech version
 
-## Co tento rámec neslibuje
+## What this framework does not promise
 
-Rámec není bezpečnostní certifikace, právní stanovisko ani důkaz, že konkrétní agentní systém je bezpečný. Nenahrazuje sandbox, autorizaci, správu tajemství, auditní logy, datovou izolaci, odbornou kontrolu ani odpovědnost provozovatele.
+This framework is not a security certification, legal opinion, or proof that a particular agent system is safe. It does not replace sandboxing, authorization, secrets management, audit logs, data isolation, expert review, or operator responsibility.
 
-Je to návrhová a provozní opora. Pomáhá položit přesnější otázky, rozdělit odpovědnost a vytvořit podmínky, ve kterých může agent jednat užitečně, aniž by byl nucen předstírat jistotu nebo dokončení.
+It is a design and operating aid. It helps teams ask better questions, allocate responsibility, and create conditions where an agent can act usefully without pretending to be certain or finished.
 
-## Stav
+## Status
 
-Pracovní verze `0.1.0-draft`. Rámec je licencovaný pod MIT. Před prvním veřejným vydáním zbývá autorská revize významu a rozhodnutí o jazykové podobě release.
+Public working version `0.1.0-draft`, available in English and Czech under the MIT License.
 

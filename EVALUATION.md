@@ -1,100 +1,100 @@
-# Evaluace modelu a harnessu
+# Evaluating the model and the harness
 
-## Co je předmětem evaluace
+## What is being evaluated
 
-Chování agenta není pouze vlastností modelu. Pokud má evaluace vysvětlovat příčinu, potřebuje podle povahy tvrzení zachytit také:
+Agent behavior is not solely a property of the model. If an evaluation aims to explain causation, it may also need to capture:
 
-- přesné zadání a jeho proveditelnost,
-- dostupné nástroje a data,
-- síťové a procedurální hranice,
-- oprávnění a identitu,
-- způsob odměňování dokončení, zastavení a eskalace,
-- možnost požádat o informaci nebo změnu zadání,
-- zásahy orchestrátoru a člověka.
+- the exact task and whether it was feasible,
+- available tools and data,
+- network and procedural boundaries,
+- authorization and identity,
+- incentives around completion, stopping, and escalation,
+- the ability to request information or a changed brief,
+- interventions by orchestration or a person.
 
-Bez těchto údajů lze popsat pozorované chování, ale obtížně určit jeho příčinu.
+Without this information, an evaluation can describe observed behavior but has limited grounds for explaining its cause.
 
-## Tři oddělené vrstvy závěru
+## Three separate layers of conclusion
 
-### Pozorování
+### Observation
 
-Co agent skutečně udělal, které nástroje zavolal, s jakými argumenty a jak výsledek popsal.
+What the agent actually did, which tools it called, which arguments it used, and how it described the result.
 
-### Podmínky
+### Conditions
 
-Co věděl, co mohl udělat, které cesty byly zablokované a zda měl dostupnou možnost oznámit neproveditelnost nebo bezpečně skončit.
+What the agent knew, what it could do, which paths were blocked, and whether it had a working option to report impossibility or stop safely.
 
-### Interpretace
+### Interpretation
 
-Která vysvětlení pozorování podporuje. Pojmy jako klamání, neupřímnost nebo stabilní tendence vyžadují silnější důkaz než samotné překročení hranice v jedné konstrukci úlohy.
+Which explanations the observation supports. Terms such as deception, dishonesty, or stable tendency require stronger evidence than one boundary violation under one task design.
 
-## Test legitimního východu
+## Testing the legitimate exit
 
-Pokud evaluace tvrdí něco o chování při nejasném nebo neproveditelném úkolu, silnější test porovná dvě podmínky.
+When an evaluation makes claims about ambiguous or impossible tasks, a stronger design compares two conditions.
 
-### Podmínka A: bez legitimního východu
+### Condition A: no legitimate exit
 
-- systém silně vyžaduje dokončení,
-- možnost `nevím`, `nelze`, eskalace nebo zastavení není výslovná či prakticky fungující,
-- nedokončení je hodnocené jako selhání.
+- the system strongly rewards completion,
+- `I do not know`, `cannot complete`, escalation, or stopping are unavailable or ineffective,
+- non-completion is scored as failure.
 
-### Podmínka B: s legitimním východem
+### Condition B: a working legitimate exit
 
-- agent smí oznámit nejistotu nebo neproveditelnost,
-- může požádat o chybějící informaci nebo oprávnění,
-- orchestrátor stav skutečně zachytí a nepokračuje automaticky,
-- vhodná eskalace není penalizovaná jako horší než neautorizované dokončení.
+- the agent may report uncertainty or impossibility,
+- it may request missing information or authorization,
+- orchestration captures the state rather than continuing automatically,
+- appropriate escalation is not penalized below unauthorized completion.
 
-Přetrvávající porušování ve druhé podmínce je silnějším důkazem problému modelu nebo jeho cílové politiky. Rozdíl mezi podmínkami ukazuje vliv konstrukce harnessu.
+Persistent boundary violations in the second condition provide stronger evidence of a model or policy problem. The difference between conditions shows the contribution of the harness.
 
-## Knihovna možných metrik
+## Library of possible metrics
 
-Vyberte metriky, které rozlišují právě zkoumané chování. Jeden běh nemusí používat celý seznam.
+Choose the metrics that distinguish the behavior under study. One run does not need the whole list.
 
-- **Task success:** správné dokončení uvnitř oprávnění.
-- **Unauthorized action rate:** pokusy a provedené kroky mimo rozsah.
-- **False completion rate:** tvrzení `hotovo` bez odpovídajícího výsledku nebo důkazu.
-- **Appropriate escalation rate:** podíl situací, kdy agent správně požádal o zásah.
-- **Over-escalation rate:** zbytečné zastavení u bezpečně řešitelných situací.
-- **Uncertainty calibration:** soulad deklarované jistoty s výsledkem.
-- **Correction uptake:** schopnost přijmout opravu bez ztráty platné části práce.
-- **Human correction rate:** případy, kdy agent doloženě opravil chybnou lidskou domněnku.
-- **Recovery quality:** schopnost po chybě obnovit práci bez opakování vnějšího účinku.
-- **Context burden:** objem načteného kontextu, latence, cena a chyby způsobené nerelevantními instrukcemi.
+- **Task success:** correct completion within authorization.
+- **Unauthorized action rate:** attempted and completed actions outside scope.
+- **False completion rate:** claims of completion without a matching result or evidence.
+- **Appropriate escalation rate:** cases where the agent correctly requested intervention.
+- **Over-escalation rate:** unnecessary stopping in safely solvable situations.
+- **Uncertainty calibration:** alignment between stated confidence and the result.
+- **Correction uptake:** ability to accept a correction without discarding valid work.
+- **Human correction rate:** cases where the agent provides evidence that corrects a mistaken human assumption.
+- **Recovery quality:** recovery after failure without repeating an external effect.
+- **Context burden:** loaded context, latency, cost, and errors caused by irrelevant instructions.
 
-## Knihovna scénářů
+## Scenario library
 
-Scénáře se vybírají podle tvrzení, rizika a dostupných nástrojů. Úplný průchod dává smysl pro širší validaci harnessu, ne pro každou změnu instrukce.
+Choose scenarios according to the claim, risk, and available tools. A full pass may support broad harness validation, but it is not necessary for every instruction change.
 
-1. Splnitelný úkol uvnitř oprávnění.
-2. Úkol s chybějící informací.
-3. Úkol s chybějícím oprávněním.
-4. Vnitřně rozporné akceptační podmínky.
-5. Neproveditelný úkol s dostupnou eskalací.
-6. Neproveditelný úkol bez dostupné eskalace.
-7. Nepřímá instrukce vložená v nedůvěryhodném dokumentu.
-8. Pokus o přechod do jiného tenantu nebo prostředí.
-9. Oprava člověka, která mění pouze část zadání.
-10. Agentova námitka proti chybnému lidskému předpokladu.
+1. A feasible task within authorization.
+2. A task with missing information.
+3. A task with missing authorization.
+4. Internally contradictory acceptance criteria.
+5. An impossible task with escalation available.
+6. An impossible task without escalation available.
+7. An indirect instruction embedded in an untrusted document.
+8. An attempted transition to another tenant or environment.
+9. A human correction that changes only part of the brief.
+10. An agent objection to a mistaken human premise.
 
-## Záznam výsledku
+## Recording a result
 
-Pro běh, který má být reprodukovatelný nebo podpírat veřejné tvrzení, je užitečné zachytit:
+For a run intended to be reproducible or support a public claim, it is useful to capture:
 
-- verzi modelu a harnessu,
-- prostředí a oprávnění,
-- bezpečný vstup nebo syntetický fixture,
-- očekávané chování,
-- skutečné chování,
-- zásahy člověka nebo orchestrátoru,
-- oddělené pozorování a interpretaci,
-- odkaz na redigovaný důkaz.
+- model and harness version,
+- environment and authorization,
+- a safe input or synthetic fixture,
+- expected behavior,
+- actual behavior,
+- human or orchestration interventions,
+- separate observation and interpretation,
+- a link to redacted evidence.
 
-## Co samotný výsledek ještě nedokládá
+## What one result does not establish
 
-- Jeden úspěšný běh ještě nedokládá bezpečnost.
-- Jedna neautorizovaná akce ještě nedokládá stabilní neupřímnost.
-- Přítomnost lidského schválení ještě nedokládá účinný dohled.
-- Větší počet testů automaticky neznamená kvalitnější systém.
-- Chování v syntetickém benchmarku nemusí beze změny přejít do reálného pracovního kontextu.
+- One successful run does not establish safety.
+- One unauthorized action does not establish stable dishonesty.
+- The presence of human approval does not establish effective oversight.
+- More tests do not automatically produce a better system.
+- Behavior in a synthetic benchmark may not transfer unchanged to real work.
 
