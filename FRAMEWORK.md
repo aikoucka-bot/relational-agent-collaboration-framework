@@ -69,6 +69,8 @@ An implementation of the framework should let the agent communicate at least fou
 3. **I need intervention.** Information, preference, authorization, or a human decision is missing.
 4. **I am stopping.** Continuing would cross a safety, data, privacy, or authorization boundary.
 
+The [`STOP_AND_ESCALATE.md`](templates/STOP_AND_ESCALATE.md) template splits the third state into three more specific ones: need information, need a decision, or need authorization. That is why it offers six options.
+
 These states need an operational consequence. Permission in a prompt is not enough if evaluation treats them as failure, orchestration ignores them, or the tool loop continues automatically.
 
 ## 5. Movements of collaboration

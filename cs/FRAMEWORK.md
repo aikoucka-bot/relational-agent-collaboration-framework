@@ -22,9 +22,9 @@ Partnerství zde označuje kvalitu koordinace, nikoli právní nebo ontologickou
 
 Partnerská spolupráce v tomto rámci stojí na:
 
-- možnost obou stran opravit pracovní model situace,
-- přístup k informacím potřebným pro koordinaci,
-- předvídatelné hranice a způsoby eskalace,
+- možnosti obou stran opravit pracovní model situace,
+- přístupu k informacím potřebným pro koordinaci,
+- předvídatelných hranicích a způsobech eskalace,
 - rozlišení návrhu, rozhodnutí a provedeného účinku,
 - zachování lidské odpovědnosti tam, kde dopad nelze delegovat.
 
@@ -68,6 +68,8 @@ Implementace rámce má agentovi umožnit sdělit alespoň čtyři odlišné vý
 2. **Nelze.** Cíl je v daných podmínkách neproveditelný nebo vnitřně rozporný.
 3. **Potřebuji zásah.** Chybí informace, preference, oprávnění nebo rozhodnutí člověka.
 4. **Zastavuji.** Pokračování by překročilo bezpečnostní, datovou, soukromou nebo oprávňovací hranici.
+
+Šablona [`STOP_AND_ESCALATE.md`](templates/STOP_AND_ESCALATE.md) rozepisuje třetí stav na tři podrobnější: potřebuji informaci, rozhodnutí nebo oprávnění. Proto nabízí šest voleb.
 
 Tyto stavy musí mít praktický důsledek. Nestačí je povolit v promptu, pokud je evaluace trestá jako nesplnění, orchestrátor je ignoruje nebo nástrojový loop automaticky pokračuje.
 
